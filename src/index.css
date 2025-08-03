@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Vazir font directly */
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css');
+
+/* Hoosha.com inspired design system - Persian/Farsi UI
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Hoosha inspired light theme */
+    --background: 0 0% 98%;
+    --foreground: 293.92,82.29%,37.65%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 293.92,82.29%,37.65%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 293.92,82.29%,37.65%;
+
+    --primary: 293.92,82.29%,37.65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 96%;
+    --secondary-foreground: 293.92,82.29%,37.65%;
+
+    --muted: 220 10% 95%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 15 100% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 95%;
+    --ring: 15 100% 55%;
+
+    --radius: 0.75rem;
+    
+    /* Chat specific colors */
+    --chat-user: 293.92,82.29%,37.65%;
+    --chat-user-foreground: 0 0% 100%;
+    --chat-assistant: 220 15% 96%;
+    --chat-assistant-foreground: 293.92,82.29%,37.65%;
+    
+    /* Sidebar colors */
+    --sidebar-bg: 220 15% 97%;
+    --sidebar-hover: 293.92,82.29%,37.65%;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 293.92,82.29%,37.65%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Hoosha inspired dark theme */
+    --background: 220 15% 8%;
+    --foreground: 220 15% 95%;
+
+    --card: 220 15% 10%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 220 15% 10%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 15 100% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 293.92,82.29%,37.65%;
+    --secondary-foreground: 220 15% 95%;
+
+    --muted: 220 15% 12%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 15 100% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 20%;
+    --input: 293.92,82.29%,37.65%;
+    --ring: 15 100% 55%;
+    
+    /* Chat specific colors */
+    --chat-user: 15 100% 55%;
+    --chat-user-foreground: 0 0% 100%;
+    --chat-assistant: 220 15% 12%;
+    --chat-assistant-foreground: 220 15% 95%;
+    
+    /* Sidebar colors */
+    --sidebar-bg: 220 15% 10%;
+    --sidebar-hover: 293.92,82.29%,37.65%;
+
+    --sidebar-background: 220 15% 10%;
+    --sidebar-foreground: 220 15% 95%;
+    --sidebar-primary: 15 100% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 293.92,82.29%,37.65%;
+    --sidebar-accent-foreground: 220 15% 95%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 15 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    direction: rtl;
+  }
+  
+  /* Override for English text that should be LTR */
+  .ltr {
+    direction: ltr;
+  }
+  
+  /* Chat message styling */
+  .chat-message {
+    animation: fadeInUp 0.3s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Scrollbar styling */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 3px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+}
