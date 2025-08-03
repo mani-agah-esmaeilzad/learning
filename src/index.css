@@ -43,7 +43,7 @@ All colors MUST be HSL.
     --radius: 0.75rem;
     
     /* Chat specific colors */
-    --chat-user: 293.92,82.29%,37.65%;
+    --chat-user: 15 100% 55%;
     --chat-user-foreground: 0 0% 100%;
     --chat-assistant: 220 15% 96%;
     --chat-assistant-foreground: 293.92,82.29%,37.65%;
@@ -64,7 +64,7 @@ All colors MUST be HSL.
 
     --sidebar-accent-foreground: 240 5.9% 10%;
 
-    --sidebar-border: 293.92,82.29%,37.65%;
+    --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
